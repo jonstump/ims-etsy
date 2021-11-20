@@ -1,5 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe Inventory, type: :model do
-  it {  }
+describe Inventory do
+  it { should validate_presence_of :title }
+  it { should validate_presence_of :price }
+  it { should validate_presence_of :sku }
 end
