@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe Customers do
-  it { should validate_presence_of :first_name }
-  it { should validate_presence_of :last_name }
-  it { should validate_presence_of :email }
+describe Customer do
+  describe 'validation' do
+    %i[first_name last_name email].each { |prop| it { should validate_presence_of prop } }
+  end
 end
